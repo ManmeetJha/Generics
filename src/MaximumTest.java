@@ -45,5 +45,24 @@ public class MaximumTest {
         Assert.assertEquals(6.0f, max,0.0f);
     }
 
+    @Test
+    public void maximumValueStringTC() {
+        String max;
+
+        //Input for TC3.1
+        String[] input1 = {"Peach" ,"Apple", "Banana"};
+        max =Maximum.getMaximumString(input1);
+        Assert.assertEquals("Peach",max);
+
+        //Input for TC3.2
+        String[] input2 = {"Apple", "Peach" ,"Banana"};
+        max =Maximum.getMaximumString(input2);
+        Assert.assertEquals("Peach",max);
+
+        //Input for TC3.3
+        String[] input3 = {"Apple","Banana", "Peach" };
+        max =Maximum.getMaximumString(input3);
+        Assert.assertEquals("Peach",max);
+   }
 
 }
