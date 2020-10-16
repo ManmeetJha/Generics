@@ -8,6 +8,12 @@ public class Maximum<E extends Comparable> {
             if(element.compareTo(max)>0)
                 max=element;
         }
+        printMax(max);
         return max;
+    }
+
+    public static <E> void printMax(E max)
+    {
+        System.out.println("Maximum number is"+max);
     }
 }

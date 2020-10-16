@@ -19,12 +19,12 @@ public class MaximumTest {
         //Float
         Maximum input2=new Maximum();
         max= (E)input2.testMaximum(10.0,20.0,30.0,40.0,50.0);
-        Assert.assertEquals(30.0,max);
+        Assert.assertEquals(50.0,max);
 
         //String
         Maximum input3=new Maximum();
         max= (E)input3.testMaximum("Apple","Banana","Peach","Zaafran");
-        Assert.assertEquals("Peach",max);
+        Assert.assertEquals("Zaafran",max);
 
     }
 }
