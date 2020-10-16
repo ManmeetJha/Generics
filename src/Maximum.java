@@ -33,4 +33,13 @@ public class Maximum {
         return max;
     }
 
+    //Generic
+    public static <E extends Comparable> E getMaximumGeneric(E[] i){
+        E max = i[0];
+        for (E element : i)
+        { if (element.compareTo(max)>0)
+            max = element; }
+        System.out.println("Largest element is:"+max);
+        return max;
+    }
 }

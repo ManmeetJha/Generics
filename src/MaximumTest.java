@@ -65,4 +65,23 @@ public class MaximumTest {
         Assert.assertEquals("Peach",max);
    }
 
+    @Test
+    public <E> void maximumValueGenericTC() {
+        E max;
+
+        //Generic_Integer
+        Integer[] input1 = {6,2,3};
+        max = (E) Maximum.getMaximumGeneric(input1);
+        Assert.assertEquals(6,max);
+
+        //Generic_Float
+        Float[] input2 = {6.0f, 2.0f, 3.0f};
+        max = (E) Maximum.getMaximumGeneric(input2);
+        Assert.assertEquals(6.0f,max);
+
+        //Generic_String
+        String[] input3 = {"Apple","Banana", "Peach" };
+        max = (E) Maximum.getMaximumGeneric(input3);
+        Assert.assertEquals("Peach",max);
+    }
 }
