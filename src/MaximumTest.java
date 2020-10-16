@@ -25,5 +25,25 @@ public class MaximumTest {
         Assert.assertEquals(6, max);
     }
 
+    @Test
+    public void maximumValueFloatTC() {
+        float max;
+
+        //Input for TC2.1
+        Float[] input1 = {6.0f, 2.0f, 3.0f};
+        max =Maximum.getMaximumFloat(input1);
+        Assert.assertEquals(6.0f, max,0.0f);
+
+        //Input for TC2.2
+        Float[] input2 = {2.0f, 6.0f, 3.0f};
+        max =Maximum.getMaximumFloat(input2);
+        Assert.assertEquals(6.0f, max, 0.0f);
+
+        //Input for TC2.3
+        Float[] input3 = {1.0f, 4.0f, 6.0f};
+        max =Maximum.getMaximumFloat(input3);
+        Assert.assertEquals(6.0f, max,0.0f);
+    }
+
 
 }
