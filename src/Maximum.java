@@ -1,24 +1,19 @@
 public class Maximum<E extends Comparable> {
-    E x,y,z;
 
-    public Maximum(E x, E y, E z) {
-        this.x = x;
-        this.y = y;
-        this.z = z;
+    public static <E extends Comparable> E testMaximum(E...z)
+    {
+        E max=z[0];
+        for(E element: z)
+        {
+            if(element.compareTo(max)>0)
+                max=element;
+        }
+        printMax(max);
+        return max;
     }
 
-    public E testMaximum()
+    public static <E> void printMax(E max)
     {
-        return testMaximum(x,y,z);
-    }
-
-    public static <E extends Comparable> E testMaximum(E x,E y,E z)
-    {
-        if(x.compareTo(y)>0 && x.compareTo(z)>0)
-            return x;
-        else if(y.compareTo(x)>0 && y.compareTo(z)>0)
-            return y;
-        else
-            return z;
+        System.out.println("Maximum number is"+max);
     }
 }
