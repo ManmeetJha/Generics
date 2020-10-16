@@ -22,4 +22,15 @@ public class Maximum {
         return max;
     }
 
+    //String
+    public static String getMaximumString(String[] i) {
+        String max = i[0];
+        for (String element : i) {
+            if (element.compareToIgnoreCase(max) > 0)
+                max = element;
+        }
+        System.out.println("Largest element is:" + max);
+        return max;
+    }
+
 }
